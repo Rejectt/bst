@@ -137,7 +137,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setTitle(`:small_orange_diamond: اضغط هنا لتضم البوت عندك في السيرفر. `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=531064404825866252&permissions=8&scope=bot`)
      message.channel.sendEmbed(embed);
        }
    });
