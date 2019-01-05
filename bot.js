@@ -133,7 +133,7 @@ client.on('message', message => {
 }});
 
 client.on('message', message => {
-        if (message.content.toLowerCase() === prefix + "بوت") {
+        if (message.content.toLowerCase() === (prefix + "بوت") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setTitle(`:small_orange_diamond: اضغط هنا لتضم البوت عندك في السيرفر. `)
@@ -142,7 +142,23 @@ client.on('message', message => {
        }
    });
 
-
+client.on('message', message => {
+ if(message.content.split(' ')[0].toLowerCase() == (prefix + 'avatar') {
+     if(message.author.bot) return;
+        if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      
+        const embed = new Discord.RichEmbed()
+.setColor('#36393e')
+        .setImage(`${x5bzm.avatarURL}`)
+        .addField('Requested By:', message.author.tag)
+      message.channel.sendEmbed(embed);
+      }
+    }
+});
 
  
  
